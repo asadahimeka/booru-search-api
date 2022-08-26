@@ -1,13 +1,13 @@
 {
-  "name": "booru-api",
-  "version": "0.1.0",
-  "description": "A simple, fast, privacy-focused alternative to Google Analytics.",
+  "name": "booru-search-api",
+  "version": "0.1.1",
+  "description": "API Service to search boorus using @himeka/booru.",
   "author": "asadahimeka <sakurayumine@ymail.ne.jp>",
   "license": "MIT",
   "homepage": "https://cocomi.cf/booru-search",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umami-software/umami.git"
+    "url": "https://github.com/asadahimeka/booru-search-api.git"
   },
   "scripts": {
     "dev": "next dev",
@@ -19,7 +19,6 @@
     "@himeka/booru": "2.7.1",
     "cors": "2.8.5",
     "detect-browser": "5.3.0",
-    "is-localhost-ip": "1.4.0",
     "isbot": "3.5.1",
     "next": "12.2.5",
     "prop-types": "15.8.1",

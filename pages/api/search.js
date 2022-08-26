@@ -1,21 +1,21 @@
-import isbot from 'isbot';
-import { search } from '@himeka/booru';
-import { useCors } from 'lib/middleware';
-import { badRequest, ok, serverError } from 'lib/response';
+import isbot from 'isbot'
+import { search } from '@himeka/booru'
+import { useCors } from 'lib/middleware'
+import { badRequest, ok, serverError } from 'lib/response'
 
 export default async (req, res) => {
-  await useCors(req, res);
+  await useCors(req, res)
 
-  if (isbot(req.headers['user-agent'])) return ok(res);
+  if (isbot(req.headers['user-agent'])) return ok(res)
 
-  const { site, tags, page, limit } = req.query;
-  if (!site) return badRequest(res);
+  const { site, tags, page, limit } = req.query
+  if (!site) return badRequest(res)
 
   try {
-    const result = await search(site, tags, { page, limit });
-    return ok(res, result);
+    const result = await search(site, tags, { page, limit })
+    return ok(res, result.map(e => e.data))
   } catch (error) {
-    return serverError(res, error.toString());
+    return serverError(res, error.toString())
   }
 
-};
+}

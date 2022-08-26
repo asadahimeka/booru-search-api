@@ -13,6 +13,9 @@
     "sourceType": "module"
   },
   "rules": {
+    "quotes": ["warn", "single"],
+    "semi": ["error", "never"],
+    "no-unexpected-multiline": "error",
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",

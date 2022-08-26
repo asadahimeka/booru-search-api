@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }) {
-  const { basePath } = useRouter();
+  const { basePath } = useRouter()
 
   return (
     <>
@@ -14,5 +14,5 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  );
+  )
 }
