@@ -13,7 +13,6 @@ export default async (req, res) => {
 
   try {
     const result = await search(site, tags, { page, limit })
-    console.log('result: ', result)
     return ok(res, result.map(e => e.data))
   } catch (error) {
     return serverError(res, error.toString())
