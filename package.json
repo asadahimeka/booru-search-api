@@ -16,7 +16,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@himeka/booru": "2.7.1",
+    "@himeka/booru": "git+https://github.com/asadahimeka/booru-search",
     "cors": "2.8.5",
     "detect-browser": "5.3.0",
     "isbot": "3.5.1",
