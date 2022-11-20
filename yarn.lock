@@ -32,13 +32,13 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@himeka/booru@2.7.1":
-  version "2.7.1"
-  resolved "https://registry.npmmirror.com/@himeka/booru/-/booru-2.7.1.tgz#7147a6bcbcf6e19053f7db24834de1634b32c637"
-  integrity sha512-F8ikl+83E2kNzv3DmNtOI06mKmYFkEYpbrKjtuMU3xxyeOjUuMjGC+/8hoE1HOm7KBWxBah9Reqvl57ujWpgXQ==
+"@himeka/booru@2.7.6":
+  version "2.7.6"
+  resolved "https://registry.npmmirror.com/@himeka/booru/-/booru-2.7.6.tgz#1cd1cfccff8877d405fa444604159c9efaa6e646"
+  integrity sha512-fFvROGXE6r/z0I/f+UIeSOvem7PBr6UVem/7CKT8tVozHB13N9V6yHXTHIvhZGm77ZxbXaLh3Ia6vhUY8p3uxQ==
   dependencies:
-    fast-xml-parser "^3.19.0"
-    node-fetch "^2.6.7"
+    fast-xml-parser "4.0.11"
+    isomorphic-unfetch "3.1.0"
 
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
@@ -753,12 +753,12 @@ fast-levenshtein@^2.0.6:
   resolved "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fast-xml-parser@^3.19.0:
-  version "3.21.1"
-  resolved "https://registry.npmmirror.com/fast-xml-parser/-/fast-xml-parser-3.21.1.tgz#152a1d51d445380f7046b304672dd55d15c9e736"
-  integrity sha512-FTFVjYoBOZTJekiUsawGsSYV9QL0A+zDYCRj7y34IO6Jg+2IMYEtQa+bbictpdpV8dHxXywqU7C0gRDEOFtBFg==
+fast-xml-parser@4.0.11:
+  version "4.0.11"
+  resolved "https://registry.npmmirror.com/fast-xml-parser/-/fast-xml-parser-4.0.11.tgz#42332a9aca544520631c8919e6ea871c0185a985"
+  integrity sha512-4aUg3aNRR/WjQAcpceODG1C3x3lFANXRo8+1biqfieHmg9pyMt7qB4lQV/Ta6sJCTbA5vfD8fnA8S54JATiFUA==
   dependencies:
-    strnum "^1.0.4"
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.13.0"
@@ -1040,11 +1040,6 @@ is-glob@^4.0.0, is-glob@^4.0.1, is-glob@^4.0.3:
   dependencies:
     is-extglob "^2.1.1"
 
-is-localhost-ip@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/is-localhost-ip/-/is-localhost-ip-1.4.0.tgz#dd66aaabcbb5dbbc943e00adad5f715d2c3b3a1d"
-  integrity sha512-cN7SzlY7BVxSeoJu5equjsZaKSgD4HCfXrTwu0Jgbq5BbT1BU+D7Lyi/l1KO8H0un0JTlxcQaT/GWVapu+DIDg==
-
 is-negative-zero@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/is-negative-zero/-/is-negative-zero-2.0.2.tgz#7bf6f03a28003b8b3965de3ac26f664d765f3150"
@@ -1107,6 +1102,14 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
+
+isomorphic-unfetch@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/isomorphic-unfetch/-/isomorphic-unfetch-3.1.0.tgz#87341d5f4f7b63843d468438128cb087b7c3e98f"
+  integrity sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==
+  dependencies:
+    node-fetch "^2.6.1"
+    unfetch "^4.2.0"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
@@ -1283,7 +1286,7 @@ next@12.2.5:
     "@next/swc-win32-ia32-msvc" "12.2.5"
     "@next/swc-win32-x64-msvc" "12.2.5"
 
-node-fetch@^2.6.7:
+node-fetch@^2.6.1:
   version "2.6.7"
   resolved "https://registry.npmmirror.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
@@ -1667,7 +1670,7 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-strnum@^1.0.4:
+strnum@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmmirror.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
   integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
@@ -1754,6 +1757,11 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+unfetch@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/unfetch/-/unfetch-4.2.0.tgz#7e21b0ef7d363d8d9af0fb929a5555f6ef97a3be"
+  integrity sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==
 
 uri-js@^4.2.2:
   version "4.4.1"

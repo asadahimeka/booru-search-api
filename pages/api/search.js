@@ -3,6 +3,11 @@ import { search } from '@himeka/booru'
 import { useCors } from 'lib/middleware'
 import { badRequest, ok, serverError } from 'lib/response'
 
+const credentialsMap = {
+  'konachan.net': '&api_key=WcNnoaioCBaXqS_Y-jRbjA',
+  'konachan.com': '&api_key=WcNnoaioCBaXqS_Y-jRbjA'
+}
+
 export default async (req, res) => {
   await useCors(req, res)
 
@@ -12,7 +17,8 @@ export default async (req, res) => {
   if (!site) return badRequest(res)
 
   try {
-    const result = await search(site, tags, { page, limit })
+    const credentials = credentialsMap[site]
+    const result = await search(site, tags, { page, limit, credentials })
     return ok(res, result.map(e => e.data))
   } catch (error) {
     return serverError(res, error.toString())
