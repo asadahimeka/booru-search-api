@@ -1,0 +1,23 @@
+{
+  "github": {
+    "silent": true
+  },
+  "functions": {
+    "pages/api/*.js": {
+      "memory": 128
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CN"
+        }
+      ],
+      "destination": "/404"
+    }
+  ]
+}

@@ -19,6 +19,7 @@ export default async (req, res) => {
   try {
     const credentials = credentialsMap[site]
     const result = await search(site, tags, { page, limit, credentials })
+    res.setHeader('cache-control', 'max-age=0, s-maxage=600')
     return ok(res, result.map(e => e.data))
   } catch (error) {
     return serverError(res, error.toString())
