@@ -7,7 +7,7 @@
       "memory": 128
     }
   },
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
       "has": [
@@ -17,7 +17,8 @@
           "value": "CN"
         }
       ],
-      "destination": "/404"
+      "destination": "/404",
+      "statusCode": 404
     }
   ]
 }
