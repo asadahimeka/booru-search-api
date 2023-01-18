@@ -47,7 +47,6 @@ module.exports = {
       {
         source: '/((?!404).*)',
         destination: '/404',
-        statusCode: 404,
         has: [{ type: 'header', key: 'x-vercel-ip-country', value: 'CN' }],
       },
     ];
