@@ -44,10 +44,12 @@ module.exports = {
   },
   async rewrites() {
     return [
-      // {
-      //   source: '/telemetry.js',
-      //   destination: '/api/scripts/telemetry',
-      // },
+      {
+        source: '/((?!404).*)',
+        destination: '/404',
+        statusCode: 404,
+        has: [{ type: 'header', key: 'x-vercel-ip-country', value: 'CN' }],
+      },
     ];
   },
 };
