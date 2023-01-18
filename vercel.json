@@ -17,8 +17,7 @@
           "value": "CN"
         }
       ],
-      "destination": "https://www.baidu.com",
-      "statusCode": 404
+      "destination": "https://www.baidu.com"
     }
   ]
 }
