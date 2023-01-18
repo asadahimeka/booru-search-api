@@ -42,11 +42,11 @@ module.exports = {
       },
     ];
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
-        source: '/((?!404).*)',
-        destination: '/404',
+        source: '/(.*)',
+        destination: 'https://www.baidu.com',
         has: [{ type: 'header', key: 'x-vercel-ip-country', value: 'CN' }],
       },
     ];
