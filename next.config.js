@@ -42,14 +42,8 @@ module.exports = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/(.*)',
-        destination: 'https://www.baidu.com',
-        permanent: true,
-        has: [{ type: 'header', key: 'x-vercel-ip-country', value: 'CN' }],
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //   ];
+  // },
 };

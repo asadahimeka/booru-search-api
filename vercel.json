@@ -6,18 +6,5 @@
     "pages/api/*.js": {
       "memory": 128
     }
-  },
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-ip-country",
-          "value": "CN"
-        }
-      ],
-      "destination": "https://www.baidu.com"
-    }
-  ]
+  }
 }
