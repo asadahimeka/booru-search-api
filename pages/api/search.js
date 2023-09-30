@@ -19,10 +19,26 @@ export default async (req, res) => {
   try {
     const credentials = credentialsMap[site]
     const result = await search(site, tags, { page, limit, credentials })
-    res.setHeader('cache-control', 'max-age=0, s-maxage=600')
-    return ok(res, result.map(e => e.data))
+    res.setHeader('cache-control', 'max-age=0, s-maxage=600')    
+    return ok(res, result.map(e => {
+      const data = { ...e }
+      for (const key of listGetters(e)) {
+        data[key] = e[key]
+      }
+      return data
+    }))
   } catch (error) {
     return serverError(res, error.toString())
   }
 
+}
+
+function listGetters (instance) {
+  return Object.entries(
+    Object.getOwnPropertyDescriptors(
+      Reflect.getPrototypeOf(instance)
+    )
+  )
+  .filter(e => typeof e[1].get === 'function' && e[0] !== '__proto__')
+  .map(e => e[0]);
 }
